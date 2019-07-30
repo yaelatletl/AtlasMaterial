@@ -13,6 +13,7 @@ func _on_material_ready():
 	var RegionSize = get_surface_material(0).get_region(material_region_index).get_size()
 	var uv_scale = RegionSize/AtlasSize
 	var uv_offset = get_surface_material(0).get_region(material_region_index).get_location()
+	uv_offset = uv_offset/AtlasSize
 	original_mesh = self.mesh
 	var primitive_type = Mesh.PRIMITIVE_TRIANGLES
 	var arrays = []

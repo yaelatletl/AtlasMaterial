@@ -28,11 +28,3 @@ _global_script_class_icons={
 
 config/name="3DTextureAtlas"
 config/icon="res://icon.png"
-
-[autoload]
-
-Definitions="*res://Definitions.gd"
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
