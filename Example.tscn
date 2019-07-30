@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://test.png" type="Texture" id=1]
+[ext_resource path="res://AtlasMaterial.gd" type="Script" id=2]
+[ext_resource path="res://AtlasedMeshInstance.gd" type="Script" id=3]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+script = ExtResource( 2 )
+Regions = [ Rect2( 0, 0, 4096, 4096 ), Rect2( 4096, 0, 4096, 4096 ), Rect2( 0, 4096, 1024, 1024 ) ]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="MeshInstance" type="MeshInstance"]
+material_override = SubResource( 2 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.755424, 0, -0.655236, 0, 1, 0, 0.655236, 0, 0.755424, -2.85545, 0, 5.82081 )

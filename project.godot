@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "LargeTexture",
+"class": "AtlasRegionArray",
+"language": "GDScript",
+"path": "res://Definitions.gd"
+}, {
+"base": "MeshInstance",
+"class": "AtlasedMeshInstance",
+"language": "GDScript",
+"path": "res://AtlasedMeshInstance.gd"
+} ]
+_global_script_class_icons={
+"AtlasRegionArray": "",
+"AtlasedMeshInstance": ""
+}
+
+[application]
+
+config/name="3DTextureAtlas"
+config/icon="res://icon.png"
+
+[autoload]
+
+Definitions="*res://Definitions.gd"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
